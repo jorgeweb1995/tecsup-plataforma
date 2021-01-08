@@ -1,0 +1,56 @@
+aside.plataforma__aside
+    .aside__contenedor.max-container
+        .aside__calendario
+            h2.secondary-title Calendario
+            .calendario.calendar
+                <div class="calendar__info">
+                    <div class="calendar__month" id="month"></div>
+                    <div class="calendar__year" id="year"></div>
+                    <div class="calendar__prev fas fa-chevron-left" id="prev-month"></div>
+                    <div class="calendar__next fas fa-chevron-right" id="next-month"></div>
+                </div>
+                <div class="calendar__week">
+                    <div class="calendar__day calendar__item">Lun.</div>
+                    <div class="calendar__day calendar__item">Mar.</div>
+                    <div class="calendar__day calendar__item">Mié.</div>
+                    <div class="calendar__day calendar__item">Jue.</div>
+                    <div class="calendar__day calendar__item">Vie.</div>
+                    <div class="calendar__day calendar__item">Sáb.</div>
+                    <div class="calendar__day calendar__item">Dom.</div>
+                </div>
+                <div class="calendar__dates" id="dates"></div>
+        .aside__notificaciones
+            .notificaciones__header 
+                h2.secondary-title Notificaciones
+                a(href="#") Ver todo
+            .notificaciones__mensajes
+                a.notificaciones__item(href="mensaje-4.html")
+                    .notificaciones__mensaje
+                        span Entrega de Certificado de Egresado
+                        span 03 de Ene de 2021
+                    span.notificaciones__icono.fas.fa-chevron-right
+
+                a.notificaciones__item(href="mensaje-3.html")
+                    .notificaciones__mensaje
+                        span Comprobante de pago de Certificado de Egresado
+                        span 03 de Dic de 2020
+                    span.notificaciones__icono.fas.fa-chevron-right
+                
+                a.notificaciones__item(href="mensaje-2.html")
+                    .notificaciones__mensaje
+                        span Inicio de temporada: Ruta laboral 2021
+                        span 20 de Dic de 2020
+                    span.notificaciones__icono.fas.fa-chevron-right
+
+                a.notificaciones__item(href="mensaje-1.html")
+                    .notificaciones__mensaje
+                        span Información sobre convenios institucionales
+                        span 08 de Dic de 2020
+                    span.notificaciones__icono.fas.fa-chevron-right
+
+
+
+
+
+
+                    // https://desarrolloweb.com/articulos/recortar-texto-css-ellipsis.html

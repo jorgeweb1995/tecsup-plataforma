@@ -1,0 +1,21 @@
+@import "config/media";
+@import "config/variables";
+@import "config/mixins";
+@import "config/funciones";
+
+@import "base/base";
+
+@import "layout/header";
+@import "layout/aside";
+@import "layout/footer";
+
+@import "components/tabla";
+
+@import "pages/login";
+@import "pages/inicio";
+@import "pages/tramites";
+@import "pages/mensajes";
+
+
+//---- SOBRESCRIBIR ESTILOS 
+@import "hacks/hacks";

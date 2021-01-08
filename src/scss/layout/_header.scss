@@ -1,0 +1,234 @@
+header{
+    width            : 100%;
+    position         : fixed;
+    z-index          : 9;
+    background-color : var(--light-color);
+    @include from ($m3){
+        box-shadow  : unset;
+        height      : 100vh;
+        width       : 200px;
+        padding     : 2rem 1.5rem;
+        background-color: var(--light-color)
+    }
+    .header__contenedor{
+        padding-top     : .5rem;
+        padding-bottom  : .5rem;
+        display         : flex;
+        justify-content : space-between;
+        align-items     : center;
+        @include from ($m3){
+            --medidas: 100%;
+            padding-top    : 0;
+            padding-bottom : 0;
+            flex-direction: column;
+            justify-content: initial;
+            align-items: initial;
+            width: var(--medidas);
+            height: var(--medidas);
+        }
+        // Logotipo
+        &--logotipo{
+            order: 1;
+            position : relative;
+            z-index  : 2;
+            @include from ($m3){
+                order: 0;
+                margin-right: auto;
+            }
+            a{
+                background-image    : url(../../public/img/logo-positivo.svg);
+                background-repeat   : no-repeat;
+                background-position : center;
+                background-size     : contain;
+                width               : 110px;
+                height              : 55px;
+                text-indent         : -1000em;
+                display             : block;
+                @media screen and (min-width: 600px){
+                    width: 130px;
+                    @include from ($m2){
+                        width  : 140px;
+                        @include from ($m3) {
+                            width  : 130px;
+                            height: auto;
+                            background-position: left
+                        }
+                    }
+                }
+            }
+        }
+        // Icono Navegación
+        &--icono{
+            width    : 28px;
+            cursor   : pointer;
+            display  : block;
+            position : relative;
+            z-index  : 2;
+            .icon-element{
+                width            : 100%;
+                height           : 2px;
+                transition       : transform .5s, opacity .5s;
+                background-color : var(--dark-color);
+                &:nth-child(2),
+                &:nth-child(3){margin-top : 5px}
+            }
+            @include from ($m3){display : none}
+        }
+        // Clase Icono JS
+        .iconClick{
+            .icon-element{
+                &:nth-child(1){transform : rotate(45deg) translate(5px, 5px)}
+                &:nth-child(2){
+                    transform : translateX(20px);
+                    opacity   : 0;
+                }
+                &:nth-child(3){transform : rotate(-45deg) translate(5px, -5px)}
+            }
+        }
+        // Navegación
+       
+        // Navegación Transición
+        .navTranslate{
+            pointer-events:  auto;
+            opacity: 1;
+        }
+        // Usuario
+        .header__usuario{
+            cursor: pointer;
+            order: 2;
+            position : relative;
+            z-index  : 2;
+            @include from ($m3){
+                display: flex;
+                align-items: center;
+                width: calc(100% + 10px);
+                margin-left: -10PX;
+            }
+            .usuario__img{
+                --medidas: 33px;
+                width: var(--medidas);
+                height: var(--medidas);
+                object-fit: cover;
+                border-radius: 50%;
+                @include from ($m2){--medidas: 36px}
+                @include from ($m3){--medidas: 30px}
+            }
+            .usuario__datos{
+                display: none;
+                @include from ($m3){
+                    display: block;
+                    padding-left: .5rem;
+                    padding-right: .2rem;
+                    width: 100%;
+                }
+                span{
+                    display: block;
+                    &.dato__usuario{
+                        color: var(--dark-color);
+                        font-size: .8rem;
+                        font-weight: 700
+                    }
+                    &.dato__codigo{
+                        font-size: .7rem;
+                        margin-top: .1rem;
+                        color: var(--dark-color-alt)
+                    }
+                }
+            }
+            .usuario__nav{
+                display: none;
+                @include from ($m3){
+                    display: block;
+                    color: var(--first-color)
+                }
+            }
+        }
+    }
+}
+
+
+@for $i from 1 through 7{
+    .nav__#{$i} .nav__lista--active:nth-child(#{$i}){
+        a{color: var(--first-color)}
+    }
+}
+
+
+// Navegación
+nav,
+.usuario{
+    position         : fixed;
+    width            : 100%;
+    top              : 0;
+    left             : 0;
+    pointer-events   : none;
+    opacity          : 0;
+    transition       : opacity .5s;
+    height           : 100vh;
+    display          : flex;
+    align-items      : flex-start;
+    background-color : var(--light-color);
+    @include from ($m2){
+        top    : 71px;
+        height : calc(100% - 71px)
+    }
+    @include from ($m3){
+        pointer-events   : auto;
+        opacity          : 1;
+        position         : static;
+        height           : 100%;
+        width            : 100%;
+        align-items      : flex-start;
+        padding-top      : 1.5rem;
+        background-color: transparent;
+    }
+    .nav__lista{
+        padding-top: calc(1.5rem + 60px);
+        @include from ($m3) {
+            display     : flex;
+            align-items : center;
+            flex-direction: column;
+            padding-top: 0;
+            width: 100%;
+        }
+        &--item{
+            text-align: left;
+            @include from ($m3){
+                width: 100%;
+            }
+            span{margin-right: .8rem}
+            a{
+                color     : var(--dark-color);
+                font-size : 1rem;
+                padding   : 1rem 0;
+                display   : inline-block;
+                width: 100%;
+                @include from ($m3){
+                    padding     : .8rem 0;
+                    font-weight : 400;
+                    font-size   : .9rem;
+                }
+            }
+        }
+    }
+}
+
+.usuario{
+    @include from ($m3){
+        --left: 10px;
+        @include shadow-dark;
+        position: absolute;
+        border-radius: 5px;
+        opacity: 0;
+        pointer-events: none;
+        left: calc(100% + var(--left));
+        bottom: 40px;
+        top: inherit;
+        height: auto;
+        padding: 1rem;
+        background-color: var(--light-color);
+    }
+    .icono--salida{
+        transform: rotate(180deg)
+    }
+}

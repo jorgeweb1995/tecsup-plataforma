@@ -1,0 +1,204 @@
+.plataforma__aside{
+    grid-column: 1 / 5;
+    @include from ($m3){
+        grid-column: 9 / 13;
+        padding: 2.4rem 1.5rem 2.4rem 0;
+    }
+    @include from ($m4){
+        padding: 2.4rem 2rem 2.4rem 0;
+    }
+    .aside__contenedor{
+        @include from ($m2){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 16px;
+        }
+        @include from ($m3){
+            display: block;
+            max-width: 100%;
+            width: 100%;
+        }
+        .aside__calendario{
+            color: var(--dark-color);
+            // Inicio Calendario
+            // ------------------
+            .calendario{
+                //height: 160px;
+                height: auto;
+                border-radius: 5px;
+                margin-top: 1.5rem;
+                box-shadow: 0px 8px 40px -12px rgba(137, 137, 137, .35);
+                font-family: $fuente-secundaria;
+                padding: 1.5rem;
+                background-color: var(--light-color);
+                @include from ($m4){
+                    height: 250px;
+                }
+            }
+            .calendar__info {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-weight: 500;
+                position: relative;
+            }
+            .calendar__month, .calendar__year{font-size: 1rem}
+
+            .calendar__month{margin-right: .3rem}
+
+            .calendar__prev, .calendar__next{
+                color: var(--first-color);
+                cursor: pointer;
+                font-size: 1rem;
+                position: absolute;
+            }
+
+            .calendar__prev {
+                margin-right: auto;
+                right: 20px
+            }
+            .calendar__next {
+                margin-left: auto;
+                right: 0
+            }
+            .calendar__week, .calendar__dates{
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-gap: 10px;
+                font-size: .7rem;
+                margin-top: 1rem;
+                color: var(--dark-color-alt);
+                @include from ($m1){
+                    font-size: .9rem;
+                }
+                @include from ($m2){
+                    font-size: .9rem;
+                    grid-gap: 0
+                }
+                @include from ($m3){
+                    font-size: .7rem;
+                    
+                }
+                @include from ($m4){
+                    font-size: .8rem;
+                    margin-top: .8rem;
+                    
+                }
+            }
+
+            .calendar__item{
+                text-align: center;
+                line-height: 2;
+                @include from ($m1){
+                    line-height: 2.5;
+                }
+                @include from ($m2){
+                    line-height: 3;
+                }
+                @include from ($m2){
+                    line-height: 2;
+                }
+            }
+
+            .calendar__today{
+                background: var(--first-color);
+                color: var(--light-color);  
+                width: 100%;
+                border-radius: 5px;
+                margin: auto;
+                @include from ($m1){
+                    width: 80%
+                }
+                @include from ($m2){
+                    width: 60%
+                }
+                @include from ($m3){
+                    width: 100%
+                }
+                @include from ($m4){
+                    width: 75%
+                }
+                
+            }
+            .calendar__last-days {
+                opacity: .3;
+            }
+            // Fin Calendario
+            // ------------------
+        }
+        .aside__notificaciones{
+            color: var(--dark-color);
+            margin-top: 30px;
+            @include from ($m2){
+                margin-top: 0;
+            }
+            @include from ($m3){
+                margin-top: 30px;
+            }
+            .notificaciones__header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: 1.5rem;
+                a{
+                    color: var(--dark-color-alt);
+                    font-size: .9rem;
+                    font-weight: 500;
+                }
+            }
+            .notificaciones__mensajes{
+                --gap: 20px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: var(--gap);
+                padding: 1.5rem 1.5rem;
+                margin-top: 1.5rem;
+                border-radius: 5px;
+                box-shadow: 0px 8px 40px -12px rgba(137, 137, 137, .35);
+                background-color: var(--light-color);
+                @include from ($m3){
+                    --gap: 24px
+                }
+                .notificaciones__item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: var(--dark-color);
+                    .notificaciones__mensaje{
+                        span{
+                            display: block;
+                            font-size: .9rem;
+                        }
+                        span:nth-child(1){
+                            font-weight: 500;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width: 200px;
+                            @media screen and (min-width:400px ){
+                                width: 300px
+                            }
+                            @include from ($m2){
+                                width: 250px
+                            }
+                            @include from ($m3){
+                                width: 170px
+                            }
+                            @include from ($m4){
+                                width: 200px
+                            }
+                        }
+                        span:nth-child(2){
+                            color: var(--dark-color-alt);
+                            margin-top: .25rem;
+                        }
+                    }
+                    .notificaciones__icono{
+                        color: var(--first-color);
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

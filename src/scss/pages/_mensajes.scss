@@ -1,0 +1,225 @@
+.plataforma__mensajes{
+    --columns: 4;
+    --gap: 0;
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-gap: var(--gap);
+    @media screen and (min-width: 600px){
+        --columns: 12;
+        min-height: 100vh;
+    }
+    @include from ($m3){
+        grid-column: 1 / 13;
+    }
+
+    //---------------
+    .mensajes__bandeja{
+        padding-top: calc(1.5rem + 75px);
+        grid-column: 1 / 5;
+        @media screen and (min-width: 600px){
+            display: block;
+            grid-column: 1/ 6;
+        }
+        @include from ($m3){
+            padding-top: 2.4rem;
+        }
+        @include from ($m4){
+            grid-column: 1 / 5;
+        }
+        .mensajes__contenedor{
+            @include from ($m3){
+                width: 100%;
+                max-width: 100%;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            .mensajes__lista{
+                --gap: 24px;
+                margin-top: 1.5rem;
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                grid-gap: var(--gap);
+                @include from ($m3){
+                    --gap: 16px
+                }
+                @include from ($m4){
+                    --gap: 10px
+                }
+            }
+        }
+    }
+
+    //---------------
+    .mensajes__entrada{
+        display: none;
+        padding-top: calc(1.5rem + 75px);
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--light-color);
+        grid-column: 1 / 5;
+        @media screen and (min-width: 600px){
+            display: flex;
+            grid-column: 6 / 13;
+        }
+        @include from ($m3){
+            padding-top: 2.8rem;
+        }
+        @include from ($m4){
+            grid-column: 5 / 13;
+        }
+        .mensajes__seleccion{   
+            text-align: center;
+            margin-top: -100px;
+            @media screen and (min-width: 600px){
+                padding: 0 1rem;
+            }
+            @include from ($m3){
+                width: 100%;
+                padding: 0 3rem;
+            }
+            .mensaje__linea{
+                --margin: 1rem;
+                height: 1px;
+                margin-top: var(--margin);
+                margin-bottom: var(--margin);
+                opacity: .5;
+                background-color: var(--dark-color-alt);
+            }
+            .mensaje__cuerpo{
+                margin-top: 2rem;
+                font-size: .9rem;
+                &--texto{
+                    margin-bottom: 1rem;
+                }
+            }
+            .mensaje__descarga{
+                padding: .5rem;
+                display: inline-block;
+                color: var(--dark-color);
+                font-size: .8rem;
+                img{
+                    max-width: 100px;
+                    margin-bottom: .5rem;
+                }
+                p{
+                    text-align: center;
+                    span{margin-right: .3rem;}
+                }
+            }
+        }
+
+        //-------------------
+        &.mensajes__active{
+            display: block;
+            .mensajes__seleccion{
+                text-align: left;
+            }
+        }
+    }
+}
+
+.mensajes__none .mensajes__desactive{
+    display: none !important;
+    @media screen and (min-width: 600px){
+        display: block !important;
+    }
+}
+
+.mensajes__item,
+.mensaje__header{
+    display: flex;
+    grid-gap: 16px;
+    color: var(--dark-color);
+    .mensajes__img{
+        --medidas: 33px;
+        border-radius: 50%;
+        width: var(--medidas);
+        height: var(--medidas);
+        object-fit: cover;
+    }
+    .mensajes__contenido{
+        width: calc(100% - 110px);
+        span{
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 190px;
+            @media screen and (min-width: 400px){
+                width: 220px
+            }
+            @include from ($m1){
+                width: 300px
+            }
+            @media screen and (min-width: 600px){
+                width: 130px
+            }
+            @include from ($m2){
+                width: 180px
+            }
+            @media screen and (min-width: 900px){
+                width: 230px
+            }
+            @include from ($m3){
+                width: 180px
+            }
+            @media screen and (min-width: 1100px){
+                width: 220px
+            }
+            @media screen and (min-width: 1200px){
+                width: 240px
+            }
+            @include from ($m4){
+                width: 210px
+            }
+            &.mensajes__emisor{
+                font-weight: 500;
+            }
+            &.mensajes__asunto,
+            &.mensajes__cuerpo,
+            &.mensajes__cargo{
+                color: var(--dark-color-alt);
+                font-size: .8rem;
+                margin-top: 0.25rem;
+            }
+        }
+    }
+    .mensajes__fecha{
+        font-size: .8rem;
+        margin-left: auto;
+    }
+}
+
+.mensajes__item{
+    @include from ($m3){
+        padding: 1rem;
+        border-radius: 5px;
+        &:hover{
+            @include shadow-dark;
+            background-color: var(--light-color);
+        }
+    }
+}
+
+.mensajes__seleccion--icon{
+    font-size: 3rem;
+    color: var(--first-color);
+    @include from ($m3){
+        font-size: 5rem;
+    }
+}
+
+.mensajes__seleccion--alert{
+    margin-top: .8rem;
+    font-size: .9rem;
+    @include from ($m3){
+        font-size: 1rem
+    }
+}
+
+.plataforma__mensajes .mensajes__active .mensajes__seleccion{
+    margin-top: 0;
+}
+

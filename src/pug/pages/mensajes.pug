@@ -1,0 +1,16 @@
+extends ../config/template-mensajes
+append config
+    - NombPagina = "Mensajes"
+    - classActive = "nav__6"
+prepend styles
+block contenido
+    // Mensajes
+    include ../includes/mensajes
+    
+    // Mensaje Seleccionado
+    .mensajes__entrada
+        .mensajes__seleccion
+            span.mensajes__seleccion--icon.fas.fa-envelope
+            p.mensajes__seleccion--alert Seleccione un mensaje
+
+prepend script-final

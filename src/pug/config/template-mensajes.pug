@@ -1,0 +1,41 @@
+block config
+    include config
+doctype
+html(lang="es")
+    head
+        title= ` ${NombSitio} ${Separador} ${NombPagina}`
+        //--- META
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="robotos" content="index,follow")
+        meta(property="fb:app_id" content="")
+        meta(name="description" content="según el sitio")
+        meta(name="keywords" content=" palabras claves")
+        link(rel="icon" href="public/img/favicon.png" sizes="90x90")
+        //--- ESTILOS EXTERNOS
+        //-- FONT AWESOME CSS
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+        //--- TIPOGRFIA
+        link(href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900', rel='stylesheet')
+        //--- FANCYBOX
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css', rel='stylesheet')
+        //--- ESTILOS INTERNOS
+        link(rel="stylesheet" href="public/css/styles.css")
+        block styles
+    body(class= classActive, class= mensajesDesactive)
+        include ../includes/header
+        .plataforma
+            main.plataforma__mensajes
+                block contenido 
+            //include ../includes/footer
+        block script-inicio
+        //-- SCRIPT JQUERY
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        //-- SCRIPT FANCYBOX
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+        //-- MAIN
+        script(src="public/js/main-min.js")
+        block script-final
+

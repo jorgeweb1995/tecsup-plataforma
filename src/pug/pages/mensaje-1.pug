@@ -1,0 +1,31 @@
+extends ../config/template-mensajes
+append config
+    - NombPagina = "Mensajeees"
+    - classActive = "nav__6"
+    - mensajesDesactive = "mensajes__none"
+prepend styles
+block contenido
+    // Mensajes
+    include ../includes/mensajes
+
+    // Mensaje Seleccionado
+    .mensajes__entrada.mensajes__active
+        .mensajes__seleccion.max-container
+            h2.mensaje__titulo.secondary-title Información sobre convenio institucional
+            div.mensaje__linea
+            .mensaje__header
+                img(class="mensajes__img" src="https://images.unsplash.com/photo-1582804905556-0605e6433015?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80", alt="")
+                .mensajes__contenido
+                    span.mensajes__emisor Pedro Merino Chapo
+                    span.mensajes__cargo Rutal Laboral - Humanidades
+                .mensajes__fecha
+                    span.mensajes__dato 08 dic.
+            .mensaje__cuerpo
+                p.mensaje__cuerpo--texto Estimado alumno,
+                p.mensaje__cuerpo--texto Desde el área de Empleabilidad, los invitamos a participar en los distintos eventos que estamos desarrollando para ustedes.
+                p.mensaje__cuerpo--texto Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor unde in atque! Deserunt placeat facere totam et vel necessitatibus maiores illo obcaecati magnam tenetur? Tenetur necessitatibus, qui eum iusto incidunt similique ex repellat totam, corporis itaque in, maxime nemo harum aperiam at ipsa delectus minima sunt nam porro impedit quo!
+                p.mensaje__cuerpo--texto Saludos cordiales.
+                p.mensaje__cuerpo--texto Pedro Merino Chapo
+            //.mensaje__linea
+
+prepend script-final

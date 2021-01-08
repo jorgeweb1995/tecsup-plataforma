@@ -1,0 +1,11 @@
+$m1: 480px;     // small
+$m2: 768px;     // medium
+$m3: 1024px;    // standart
+$m4: 1250px;    // large
+$m5: 1400px;     // extra large
+
+@mixin from ($size){
+    @media screen and ( min-width: $size){
+        @content;
+    }
+}

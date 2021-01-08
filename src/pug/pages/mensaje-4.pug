@@ -1,0 +1,35 @@
+extends ../config/template-mensajes
+append config
+    - NombPagina = "Mensajeees"
+    - classActive = "nav__6"
+    - mensajesDesactive = "mensajes__none"
+prepend styles
+block contenido
+    // Mensajes
+    include ../includes/mensajes
+    
+    // Mensaje Seleccionado        
+    .mensajes__entrada.mensajes__active
+        .mensajes__seleccion.max-container
+            h2.mensaje__titulo.secondary-title Certificado de egresado
+            div.mensaje__linea
+            .mensaje__header
+                img(class="mensajes__img" src="public/img/mensajes/luisa-garcia.jpg", alt="Luisa García")
+                .mensajes__contenido
+                    span.mensajes__emisor Luisa Garcia Sandoval
+                    span.mensajes__cargo Administrador Estudiantil 
+                .mensajes__fecha
+                    span.mensajes__dato 08 dic.
+            .mensaje__cuerpo
+                p.mensaje__cuerpo--texto Estimado alumno,
+                p.mensaje__cuerpo--texto Le hacemos envío de su certificado de egresado el cual fue solicitado el día 19 de Diciembre, es importante que tenga en cuenta que el certificado tiene una vigencia de 2 años, pasada la fecha tendrá que volver a solicitarlo.
+                p.mensaje__cuerpo--texto Saludos cordiales.
+                p.mensaje__cuerpo--texto Luisa García Sandoval
+            .mensaje__linea
+            a(href="public/img/img-download.jpg" download="Certificado Tecsup").mensaje__descarga
+                img(src="public/img/img-download.jpg" alt="Certificado de Egresado")
+                p
+                    span.fas.fa-download
+                    | descargar
+
+prepend script-final

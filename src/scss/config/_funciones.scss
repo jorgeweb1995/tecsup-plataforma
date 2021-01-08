@@ -1,0 +1,137 @@
+//---------------------
+//---------------------
+//--- SECONDARY TITLE
+
+$secondary-font-title: (
+    font-title--small: 1.1rem,          // Default
+    font-title--medium: 1.2rem,         // 480px
+    font-title--standart: 1.3rem,       // 768px
+    font-title--big: 1.2rem,            // 1024px
+    font-title--bigx: 1.25rem);          // 1250px
+
+.secondary-title{
+    font-size: map-get($secondary-font-title, font-title--small);
+    //line-height: 2.2rem;
+        @include from ($m1){
+            font-size: map-get($secondary-font-title, font-title--medium);
+            //line-height: 2.6rem;
+            @include from ($m2){
+                font-size: map-get($secondary-font-title, font-title--standart);
+                //line-height: 2.9rem;
+                @include from ($m3){
+                    font-size: map-get($secondary-font-title, font-title--big);
+                    //line-height: 3.4rem;
+                    @include from ($m4){
+                        font-size: map-get($secondary-font-title, font-title--bigx);
+                        //line-height: 3.9rem
+                    }
+                }
+            }
+        }  
+}
+
+//---------------------
+//---------------------
+//--- DESCRIPTIVE TEXT
+
+$font-description:(
+    font-description--small: .9rem,
+    font-description--medium: 1rem);
+
+.description{
+    line-height : 1.5rem;
+    margin-top  : .8rem;
+    font-size   : map-get($font-description, font-description--small);
+    @media screen and ($m3){
+        font-size   : map-get($font-description, font-description--medium);
+        line-height : 1.6rem
+    }
+}
+
+//---------------------
+//---------------------
+//--- CONTAINER
+
+.max-container
+{
+    width        : 90%;
+    max-width    : 1250px;
+    margin-left  : auto;
+    margin-right : auto;
+    @include from ($m3){
+        width: 80%
+    }
+}
+
+//---------------------
+//---------------------
+//--- BUTTON HOVER
+
+.hover-btn{
+    display     : flex !important;
+    align-items : center;
+    &:before{
+        content          : "";
+        width            : 0;
+        height           : 1px;
+        display          : block;
+        transition       : width .5s, margin-right .5s;
+        background-color : $bg-light;
+    }
+    @include from ($m3){
+        &:hover{
+            &:before{
+                margin-right : 1rem;
+                width        : 40px
+            }
+        }
+    }
+}
+
+//---------------------
+//---------------------
+//--- BUTTON 
+
+.button_container{
+    display: flex;
+    .button{
+        padding: .8rem 2rem;
+        display: inline-block;
+        margin-top: .8rem;
+        box-shadow: 0 0 10px 1px rgba($bg-dark, .2);
+        transition: all .5s;
+    }
+}
+
+.button__standart{
+    padding: .9rem 1.5rem;
+    color: var(--dark-color);
+    display: inline-block;
+    border-radius: 5px;
+    font-size: .9rem;
+    @include from ($m4){
+        font-size: 1rem;
+    }
+}
+
+.first-color{
+    color: var(--light-color);
+    box-shadow: 0px 10px 40px -12px rgba(0, 162, 213, .5);
+    background-color: var(--first-color);
+}
+
+.second-color{
+    color: var(--light-color);
+    box-shadow: 0px 10px 40px -12px rgba(0, 162, 213, .5);
+    background-color: var(--second-color)
+}
+
+.button__light{
+    padding: .9rem 1.5rem;
+    color: var(--dark-color);
+    box-shadow: 0px 8px 40px -12px rgba(137, 137, 137, .5);
+    background-color: var(--light-color);
+    @include from ($m4){
+        font-size: 1rem;
+    }
+}

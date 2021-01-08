@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title> Portal de Estudiantes </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robotos" content="index,follow">
+    <meta property="fb:app_id" content="">
+    <meta name="description" content="según el sitio">
+    <meta name="keywords" content=" palabras claves">
+    <link rel="icon" href="public/img/favicon.png" sizes="90x90">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">
+        <div class="login__container max-container"><img class="login__logo" src="public/img/logo-positivo.svg" alt="Tecsup">
+          <form class="login__form" method="post" action="https://tecsupprueba.000webhostapp.com/inicio.html"> 
+            <div class="contenedor__input">
+              <input class="form__input" type="text" name="codigo" required="" placeholder="Código de usuario"><span class="fas fa-user"></span>
+            </div>
+            <div class="contenedor__input">
+              <input class="form__input" type="password" name="contrasena" required="" placeholder="Contraseña"><span class="fas fa-lock"></span>
+            </div>
+            <div class="form__checkbox">
+              <p class="checkbox__login"> 
+                <input type="checkbox" id="check-cuenta">
+                <label for="check-cuenta"></label>Recordar cuenta
+              </p>
+            </div>
+            <button class="form__button button__standart first-color">Iniciar Sesión</button>
+            <button class="form__button button__google button__light"><img src="public/img/icon-google.svg" alt="google">Iniciar Sesión con Google</button><a class="form__remember" href="#">¿Olvidaste tu contraseña?</a>
+          </form>
+        </div>
+      </div>
+      <div class="background"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="public/js/main-min.js"></script>
+  </body>
+</html>

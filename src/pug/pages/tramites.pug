@@ -1,0 +1,150 @@
+extends ../config/template
+append config 
+    - NombPagina = "Trámites"
+    - classActive = "nav__3"
+prepend styles
+block contenido
+    h2.secondary-title Trámites
+    .tramites__tabs
+        ul.tabs
+            li: a.tabs__link(href="#tab1"): span(class="tab-text") Disponibles
+            li: a.tabs__link(href="#tab2"): span(class="tab-text tab-active") Procesando
+            li: a.tabs__link(href="#tab3"): span(class="tab-text") Realizados
+        .secciones
+            //----------------
+            .secciones__tab#tab1
+                ul.accordion#accordion
+                    li.accordion__item
+                       .link
+                            i.fa.fa-chevron-down
+                            | Certificados 
+                       ul.submenu: li
+                            .submenu__contenido
+                                p.submenu__contenido--descripcion Marca los documentos que deseas tramitar y selecciona tu medio de pago.
+                                .submenu__tramite
+                                    .tramite__header
+                                        .tramite__header--column: span Selección
+                                        .tramite__header--column: span Descripción
+                                        .tramite__header--column: span Importe
+                                    .tramite__row
+                                        .tramite__row--cell
+                                            .tramite__checkbox
+                                                input(type="checkbox" id="check-tramite-1")
+                                                label(for ="check-tramite-1")
+                                        .tramite__row--cell
+                                            span Cert. de egresado
+                                        .tramite__row--cell: span s/. 150.00
+                                    .tramite__row.tramite__disable
+                                        .tramite__row--cell
+                                            .tramite__checkbox
+                                                input(type="checkbox" id="check-tramite-2")
+                                                label(for ="check-tramite-2")
+                                        .tramite__row--cell
+                                            span Cert. por ciclo académico
+                                            span.tramite__mensaje
+                                                span.tramite__icono.fas.fa-exclamation
+                                                span.tramite__hover Necesitas estar al día en tus cuotas.
+                                        .tramite__row--cell: span s/. 50.00
+                                    .tramite__row
+                                        .tramite__row--cell
+                                            .tramite__checkbox
+                                                input(type="checkbox" id="check-tramite-3")
+                                                label(for ="check-tramite-3")
+                                        .tramite__row--cell
+                                            span Cert. de excelencia académica
+                                        .tramite__row--cell: span s/. 30.00
+                                .submenu__line
+                                .submenu__datos
+                                    .submenu__total
+                                        .submenu__total--header
+                                            p Resumen de pago
+                                        .submenu__total--datos
+                                            span.submenu__importe Importe total:
+                                            span.submenu__precio s/ 150.00
+                                    .submenu__medios
+                                        .submenu__medios--header
+                                            p Medios de pago
+                                        .submenu__medios--cards
+                                            .medios__card
+                                                input(type="radio" id="visa" name="medio-pago")
+                                                label(for="visa")
+                                                    img(src="public/img/tramites/t-visa.png" alt="Tarjeta BCP")
+                                            .medios__card
+                                                input(type="radio" id="bcp" name="medio-pago")
+                                                label(for="bcp")
+                                                    img(src="public/img/tramites/t-bcp.png" alt="Tarjeta BCP")
+                                            .medios__card
+                                                input(type="radio" id="mastercard" name="medio-pago")
+                                                label(for="mastercard")
+                                                    img(src="public/img/tramites/t-master.png" alt="Tarjeta BCP")    
+                                a(class="submenu__button button__standart first-color" data-fancybox="" data-src="#trueModal" data-modal="true" href="javascript:;") Realizar operación
+                    li.accordion__item  
+                       .link
+                            i.fa.fa-chevron-down
+                            | Becas y descuentos por convenio
+                       ul.submenu: li
+                            .submenu__contenido
+                    li.accordion__item
+                       .link 
+                            i.fa.fa-chevron-down
+                            | Cambio de campus
+                       ul.submenu: li
+                        .submenu__contenido
+            //----------------
+            .secciones__tab#tab2
+                .plataforma__tabla.plataforma--tramite
+                    .plataforma__contenedor
+                        .tabla__header.tabla--tramite
+                            .tabla__header--column.tabla--tramite: span N°
+                            .tabla__header--column.tabla--tramite: span Proceso
+                            .tabla__header--column.tabla--tramite: span Emisión
+                            .tabla__header--column.tabla--tramite: span Estado
+                            .tabla__header--column.tabla--tramite: span Costo
+                        .tabla__row.tabla--tramite
+                            .tabla__row--cell.tabla--datos: span 01
+                            .tabla__row--cell.tabla--datos: span Certificado de egresado
+                            .tabla__row--cell.tabla--datos: span 01/01/2021
+                            .tabla__row--cell.tabla--datos: span Pendiente
+                            .tabla__row--cell.tabla--datos: span s/. 150.00
+                        .tabla__row.tabla--tramite
+                            .tabla__row--cell.tabla--datos: span 02
+                            .tabla__row--cell.tabla--datos: span Certificado de excelencia académica
+                            .tabla__row--cell.tabla--datos: span 01/01/2021
+                            .tabla__row--cell.tabla--datos: span Pendiente
+                            .tabla__row--cell.tabla--datos: span s/. 30.00
+            //----------------
+            .secciones__tab#tab3
+                .plataforma__tabla.plataforma--tramite
+                    .plataforma__contenedor
+                        .tabla__header.tabla--tramite
+                            .tabla__header--column.tabla--realizado: span N°
+                            .tabla__header--column.tabla--realizado: span Proceso
+                            .tabla__header--column.tabla--realizado: span Emisión
+                            .tabla__header--column.tabla--realizado: span Vigencia
+                            .tabla__header--column.tabla--realizado: span Costo
+                            .tabla__header--column.tabla--realizado: span Certificado
+                        .tabla__row.tabla--tramite
+                            .tabla__row--cell.row--realizado: span 01
+                            .tabla__row--cell.row--realizado: span Certificado de excelencia académica
+                            .tabla__row--cell.row--realizado: span 03/01/2021
+                            .tabla__row--cell.row--realizado: span 13/12/2023
+                            .tabla__row--cell.row--realizado: span s/. 30.00
+                            .tabla__row--cell.row--realizado: a(data-fancybox="" data-src="#modalDescarga" data-modal="true" href="javascript:;") Ver
+                                                              
+
+    #trueModal.fancybox-content.modal__pasarela(style="display: none")
+        .pasarela__contenedor
+            .pasarela__mensaje#mensaje
+                span.mensaje__icon.fas.fa-check
+                p.mensaje__titulo Su pago ha sido exitoso
+                p.mensaje__descripcion En breve recibirás un correo con la confirmación de tu pago, de igual manera el certificado será enviado en un máximo de  3 días hábiles apartir de hoy a tu correo.
+            .pasarela__buttons
+                a(class="button__standart first-color button__efectuar" id="efectuar") Efectuar pago
+                a(class="button__standart first-color button__entendido" id="aceptar" data-fancybox-close="") Entendido
+                a(class="button__standart button__cancelar" id="cancelar" data-fancybox-close="") Cancelar
+
+    #modalDescarga.fancybox-content.modal__descarga(style="display: none")
+        img(src="public/img/tramites/img-certificado.jpg", alt="Certificado Tecsup")
+        .descarga__buttons
+            a(class="button__standart first-color button__entendido" id="aceptar" download="Certificado Tecsup" href="public/img/tramites/img-certificado.jpg") Descargar PDF
+            a(class="button__standart button__cancelar" id="cancelar" data-fancybox-close="") Cancelar

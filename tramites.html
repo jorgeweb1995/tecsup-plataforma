@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title> Portal de Estudiantes | Trámites</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robotos" content="index,follow">
+    <meta property="fb:app_id" content="">
+    <meta name="description" content="según el sitio">
+    <meta name="keywords" content=" palabras claves">
+    <link rel="icon" href="public/img/favicon.png" sizes="90x90">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/styles.css">
+  </head>
+  <body class="nav__3">
+    <header>
+      <div class="header__contenedor max-container">
+        <!-- Logo-->
+        <h1 class="header__contenedor--logotipo"><a href="inicio.html">Tecsup</a></h1>
+        <!-- Icono Navegación-->
+        <div class="header__contenedor--icono" id="icon">
+          <div class="icon-element"></div>
+          <div class="icon-element"></div>
+          <div class="icon-element"></div>
+        </div>
+        <!-- Navegación-->
+        <nav id="nav">
+          <ul class="nav__lista max-container">
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="inicio.html"><span class="fas fa-home"></span>Inicio</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="cursos.html"><span class="fas fa-book"></span>Mis Cursos</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="tramites.html"><span class="fas fa-sticky-note"></span>Trámites</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="#"><span class="fas fa-university"></span>Institución</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="#"><span class="fas fa-list"></span>Rol de Exámenes</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="mensajes.html"><span class="fas fa-envelope"></span>Mensajes</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="#"><span class="fas fa-calendar-alt"></span>Calendario</a></li>
+          </ul>
+        </nav>
+        <!-- Usuario-->
+        <div class="header__usuario" id="usuario"><img class="usuario__img" src="public/img/usuario-plataforma.jpg" alt="Jorge Portilla">
+          <div class="usuario__datos"><span class="dato__usuario">Jorge Portilla</span><span class="dato__codigo">Código: 4520902</span></div><span class="usuario__nav fas fa-ellipsis-v"></span>
+        </div>
+        <!-- Navegación Usuario-->
+        <div class="usuario" id="usuario--nav">
+          <ul class="nav__lista max-container">
+            <li class="nav__lista--item"><a class="item__link" href="#"><span class="fas fa-user"></span>Perfil</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#"><span class="fas fa-tools"></span>Configuración</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#"><span class="fas fa-th"></span>Canvas</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="index.html"><span class="fas fa-sign-out-alt icono--salida"></span>Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="plataforma">
+      <main class="plataforma__main">
+        <div class="main__contenedor max-container">
+          <h2 class="secondary-title">Trámites</h2>
+          <div class="tramites__tabs">
+            <ul class="tabs">
+              <li><a class="tabs__link" href="#tab1"><span class="tab-text">Disponibles</span></a></li>
+              <li><a class="tabs__link" href="#tab2"><span class="tab-text tab-active">Procesando</span></a></li>
+              <li><a class="tabs__link" href="#tab3"><span class="tab-text">Realizados</span></a></li>
+            </ul>
+            <div class="secciones">
+              <div class="secciones__tab" id="tab1">
+                <ul class="accordion" id="accordion">
+                  <li class="accordion__item">
+                    <div class="link"><i class="fa fa-chevron-down"></i>Certificados </div>
+                    <ul class="submenu">
+                      <li>
+                        <div class="submenu__contenido">
+                          <p class="submenu__contenido--descripcion">Marca los documentos que deseas tramitar y selecciona tu medio de pago.</p>
+                          <div class="submenu__tramite">
+                            <div class="tramite__header">
+                              <div class="tramite__header--column"><span>Selección</span></div>
+                              <div class="tramite__header--column"><span>Descripción</span></div>
+                              <div class="tramite__header--column"><span>Importe</span></div>
+                            </div>
+                            <div class="tramite__row">
+                              <div class="tramite__row--cell">
+                                <div class="tramite__checkbox">
+                                  <input type="checkbox" id="check-tramite-1">
+                                  <label for="check-tramite-1"></label>
+                                </div>
+                              </div>
+                              <div class="tramite__row--cell"><span>Cert. de egresado</span></div>
+                              <div class="tramite__row--cell"><span>s/. 150.00</span></div>
+                            </div>
+                            <div class="tramite__row tramite__disable">
+                              <div class="tramite__row--cell">
+                                <div class="tramite__checkbox">
+                                  <input type="checkbox" id="check-tramite-2">
+                                  <label for="check-tramite-2"></label>
+                                </div>
+                              </div>
+                              <div class="tramite__row--cell"><span>Cert. por ciclo académico</span><span class="tramite__mensaje"><span class="tramite__icono fas fa-exclamation"></span><span class="tramite__hover">Necesitas estar al día en tus cuotas.</span></span></div>
+                              <div class="tramite__row--cell"><span>s/. 50.00</span></div>
+                            </div>
+                            <div class="tramite__row">
+                              <div class="tramite__row--cell">
+                                <div class="tramite__checkbox">
+                                  <input type="checkbox" id="check-tramite-3">
+                                  <label for="check-tramite-3"></label>
+                                </div>
+                              </div>
+                              <div class="tramite__row--cell"><span>Cert. de excelencia académica</span></div>
+                              <div class="tramite__row--cell"><span>s/. 30.00</span></div>
+                            </div>
+                          </div>
+                          <div class="submenu__line"></div>
+                          <div class="submenu__datos">
+                            <div class="submenu__total">
+                              <div class="submenu__total--header">
+                                <p>Resumen de pago</p>
+                              </div>
+                              <div class="submenu__total--datos"><span class="submenu__importe">Importe total:</span><span class="submenu__precio">s/ 150.00</span></div>
+                            </div>
+                            <div class="submenu__medios">
+                              <div class="submenu__medios--header">
+                                <p>Medios de pago</p>
+                              </div>
+                              <div class="submenu__medios--cards">
+                                <div class="medios__card">
+                                  <input type="radio" id="visa" name="medio-pago">
+                                  <label for="visa"><img src="public/img/tramites/t-visa.png" alt="Tarjeta BCP"></label>
+                                </div>
+                                <div class="medios__card">
+                                  <input type="radio" id="bcp" name="medio-pago">
+                                  <label for="bcp"><img src="public/img/tramites/t-bcp.png" alt="Tarjeta BCP"></label>
+                                </div>
+                                <div class="medios__card">
+                                  <input type="radio" id="mastercard" name="medio-pago">
+                                  <label for="mastercard"><img src="public/img/tramites/t-master.png" alt="Tarjeta BCP"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div><a class="submenu__button button__standart first-color" data-fancybox="" data-src="#trueModal" data-modal="true" href="javascript:;">Realizar operación</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="accordion__item"> 
+                    <div class="link"><i class="fa fa-chevron-down"></i>Becas y descuentos por convenio</div>
+                    <ul class="submenu">
+                      <li>
+                        <div class="submenu__contenido"></div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="accordion__item">
+                    <div class="link"> <i class="fa fa-chevron-down"></i>Cambio de campus</div>
+                    <ul class="submenu">
+                      <li>
+                        <div class="submenu__contenido"></div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="secciones__tab" id="tab2">
+                <div class="plataforma__tabla plataforma--tramite">
+                  <div class="plataforma__contenedor">
+                    <div class="tabla__header tabla--tramite">
+                      <div class="tabla__header--column tabla--tramite"><span>N°</span></div>
+                      <div class="tabla__header--column tabla--tramite"><span>Proceso</span></div>
+                      <div class="tabla__header--column tabla--tramite"><span>Emisión</span></div>
+                      <div class="tabla__header--column tabla--tramite"><span>Estado</span></div>
+                      <div class="tabla__header--column tabla--tramite"><span>Costo</span></div>
+                    </div>
+                    <div class="tabla__row tabla--tramite">
+                      <div class="tabla__row--cell tabla--datos"><span>01</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>Certificado de egresado</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>01/01/2021</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>Pendiente</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>s/. 150.00</span></div>
+                    </div>
+                    <div class="tabla__row tabla--tramite">
+                      <div class="tabla__row--cell tabla--datos"><span>02</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>Certificado de excelencia académica</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>01/01/2021</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>Pendiente</span></div>
+                      <div class="tabla__row--cell tabla--datos"><span>s/. 30.00</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="secciones__tab" id="tab3">
+                <div class="plataforma__tabla plataforma--tramite">
+                  <div class="plataforma__contenedor">
+                    <div class="tabla__header tabla--tramite">
+                      <div class="tabla__header--column tabla--realizado"><span>N°</span></div>
+                      <div class="tabla__header--column tabla--realizado"><span>Proceso</span></div>
+                      <div class="tabla__header--column tabla--realizado"><span>Emisión</span></div>
+                      <div class="tabla__header--column tabla--realizado"><span>Vigencia</span></div>
+                      <div class="tabla__header--column tabla--realizado"><span>Costo</span></div>
+                      <div class="tabla__header--column tabla--realizado"><span>Certificado</span></div>
+                    </div>
+                    <div class="tabla__row tabla--tramite">
+                      <div class="tabla__row--cell row--realizado"><span>01</span></div>
+                      <div class="tabla__row--cell row--realizado"><span>Certificado de excelencia académica</span></div>
+                      <div class="tabla__row--cell row--realizado"><span>03/01/2021</span></div>
+                      <div class="tabla__row--cell row--realizado"><span>13/12/2023</span></div>
+                      <div class="tabla__row--cell row--realizado"><span>s/. 30.00</span></div>
+                      <div class="tabla__row--cell row--realizado"><a data-fancybox="" data-src="#modalDescarga" data-modal="true" href="javascript:;">Ver</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fancybox-content modal__pasarela" id="trueModal" style="display: none">
+            <div class="pasarela__contenedor">
+              <div class="pasarela__mensaje" id="mensaje"><span class="mensaje__icon fas fa-check"></span>
+                <p class="mensaje__titulo">Su pago ha sido exitoso</p>
+                <p class="mensaje__descripcion">En breve recibirás un correo con la confirmación de tu pago, de igual manera el certificado será enviado en un máximo de  3 días hábiles apartir de hoy a tu correo.</p>
+              </div>
+              <div class="pasarela__buttons"><a class="button__standart first-color button__efectuar" id="efectuar">Efectuar pago</a><a class="button__standart first-color button__entendido" id="aceptar" data-fancybox-close="">Entendido</a><a class="button__standart button__cancelar" id="cancelar" data-fancybox-close="">Cancelar</a></div>
+            </div>
+          </div>
+          <div class="fancybox-content modal__descarga" id="modalDescarga" style="display: none"><img src="public/img/tramites/img-certificado.jpg" alt="Certificado Tecsup">
+            <div class="descarga__buttons"><a class="button__standart first-color button__entendido" id="aceptar" download="Certificado Tecsup" href="public/img/tramites/img-certificado.jpg">Descargar PDF</a><a class="button__standart button__cancelar" id="cancelar" data-fancybox-close="">Cancelar</a></div>
+          </div>
+        </div>
+      </main>
+      <aside class="plataforma__aside">
+        <div class="aside__contenedor max-container">
+          <div class="aside__calendario">
+            <h2 class="secondary-title">Calendario</h2>
+            <div class="calendario calendar"><div class="calendar__info">
+<div class="calendar__month" id="month"></div>
+<div class="calendar__year" id="year"></div>
+<div class="calendar__prev fas fa-chevron-left" id="prev-month"></div>
+<div class="calendar__next fas fa-chevron-right" id="next-month"></div>
+</div>
+<div class="calendar__week">
+<div class="calendar__day calendar__item">Lun.</div>
+<div class="calendar__day calendar__item">Mar.</div>
+<div class="calendar__day calendar__item">Mié.</div>
+<div class="calendar__day calendar__item">Jue.</div>
+<div class="calendar__day calendar__item">Vie.</div>
+<div class="calendar__day calendar__item">Sáb.</div>
+<div class="calendar__day calendar__item">Dom.</div>
+</div>
+<div class="calendar__dates" id="dates"></div>
+            </div>
+          </div>
+          <div class="aside__notificaciones">
+            <div class="notificaciones__header"> 
+              <h2 class="secondary-title">Notificaciones</h2><a href="#">Ver todo</a>
+            </div>
+            <div class="notificaciones__mensajes"><a class="notificaciones__item" href="mensaje-4.html">
+                <div class="notificaciones__mensaje"><span>Entrega de Certificado de Egresado</span><span>03 de Ene de 2021</span></div><span class="notificaciones__icono fas fa-chevron-right"></span></a><a class="notificaciones__item" href="mensaje-3.html">
+                <div class="notificaciones__mensaje"><span>Comprobante de pago de Certificado de Egresado</span><span>03 de Dic de 2020</span></div><span class="notificaciones__icono fas fa-chevron-right"></span></a><a class="notificaciones__item" href="mensaje-2.html">
+                <div class="notificaciones__mensaje"><span>Inicio de temporada: Ruta laboral 2021</span><span>20 de Dic de 2020</span></div><span class="notificaciones__icono fas fa-chevron-right"></span></a><a class="notificaciones__item" href="mensaje-1.html">
+                <div class="notificaciones__mensaje"><span>Información sobre convenios institucionales</span><span>08 de Dic de 2020</span></div><span class="notificaciones__icono fas fa-chevron-right"></span>
+                <!-- https://desarrolloweb.com/articulos/recortar-texto-css-ellipsis.html--></a></div>
+          </div>
+        </div>
+      </aside>
+      <footer class="plataforma__footer">
+        <div class="footer__contenedor max-container"><a class="footer__logo" href="#"><img src="public/img/logo-positivo.svg" alt="Tecsup"></a>
+          <ul class="footer__lista">
+            <li><a href="#"><span class="fas fa-envelope"></span>info@tecsup.com</a></li>
+            <li><a href="#"><span class="fas fa-phone-alt"></span>Lima (01) 310 9510</a></li>
+            <li><a href="#"><span class="fas fa-phone-alt"></span>Provincia (01) 462 9308</a></li>
+            <li><a href="#"><span class="fas fa-clock"></span>Atención L-V: 08.00 - 20:00</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="public/js/main-min.js"></script>
+  </body>
+</html>

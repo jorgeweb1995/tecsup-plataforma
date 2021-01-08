@@ -1,0 +1,137 @@
+.container{
+    height: 100vh;
+    @include from ($m3){
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .login{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        @include from ($m3){
+            order: 1;
+            grid-column: 8 / 13;
+        }
+        @include from ($m4){
+            grid-column: 9 /  13;       
+        }
+        &__container{
+            max-width: 330px;
+            @include from ($m3){
+                max-width: 310px;
+            }
+            @include from ($m4){
+                max-width: 340px;
+            }
+            .login__logo{
+                --margin: auto;
+                max-width: 200px;
+                margin-left: var(--margin);
+                margin-right: var(--margin);
+            }
+            .login__form{
+                margin-top: 2.5rem;
+                @include from ($m3){
+                    margin-top: 3rem;
+                }
+                .contenedor__input{
+                    margin-bottom: 1rem;
+                    .form__input{
+                        border: 1px solid var(--dark-color);
+                        &:focus{
+                            border: 1px solid var(--first-color)
+                        }
+                    }
+                }
+                .form__checkbox{
+                    display: flex;
+                    align-items: center;
+                    .checkbox__login{
+                        display: flex;
+                        align-items: center;
+                        color: var(--dark-color-alt);
+                        font-size: .9rem;
+                        font-weight: 400;
+                        label{
+                            margin-right: .5rem;
+                        }
+                        input[type=checkbox] {
+                            display: none;
+                        }
+                        input[type=checkbox] + label {
+                            display: inline-block;
+                            position: relative;
+                            padding: 8px;
+                            background-color: var(--light-color);
+                            border: 1px solid var(--dark-color);
+                            border-radius: 4px;
+                        }
+                        input[type=checkbox]:checked + label {
+                            background-color: var(--first-color);
+                            color: var(--dark-color)
+                        }
+                        input[type=checkbox]:checked + label::after {
+                            content: "\f00c";  
+                            font-family: "Font Awesome 5 Free"; 
+                            font-weight: 900; 
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            color: var(--light-color);
+                            font-size: .5rem;
+                        } 
+                    }
+                    
+                }
+                .form__button{
+                    border-radius: 5px;
+                    display: inline-block;
+                    margin-top: 1rem;
+                    width: 100%;
+                    text-align: center;
+                    border: 0;
+                    cursor: pointer;
+                    &:focus,
+                    &:active{
+                        outline: none;
+                    }
+                    &.button__google{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 18px;
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+                .form__remember{
+                    color: var(--dark-color-alt);
+                    display: inline-block;
+                    margin-top: 1.5rem;
+                    font-size: .9rem;
+                    display: flex;
+                    justify-content: center;
+                }
+            }    
+        }
+    }
+    
+    .background{
+        --url: url('../../public/img/login/bg-image.jpg');
+        @include bg-cont;
+        background-image: var(--url);
+        height   : 100vh;
+        display  : none;
+        @include from ($m3){
+            display: block;
+            order: 0;
+            grid-column: 1 / 8;
+        }
+        @include from ($m4){
+            grid-column: 1 /  9; 
+            background-position: left center;      
+        }
+    }
+}

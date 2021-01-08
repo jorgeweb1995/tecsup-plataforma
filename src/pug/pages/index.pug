@@ -1,0 +1,29 @@
+extends ../config/template-login
+prepend styles
+block contenido
+
+    .container
+        .login
+            .login__container.max-container
+                img(src="public/img/logo-positivo.svg", alt="Tecsup").login__logo
+                form(method="post" action="https://tecsupprueba.000webhostapp.com/inicio.html" ).login__form 
+                    .contenedor__input
+                        input(type="text" name="codigo"  required="" placeholder="Código de usuario").form__input
+                        span.fas.fa-user
+                    .contenedor__input
+                        input(type="password" name="contrasena"  required="" placeholder="Contraseña").form__input
+                        span.fas.fa-lock
+                    .form__checkbox
+                        p.checkbox__login 
+                            input(type="checkbox" id="check-cuenta")
+                            label(for ="check-cuenta")
+                            | Recordar cuenta
+                    button.form__button.button__standart.first-color Iniciar Sesión
+                    button.form__button.button__google.button__light
+                        img(src="public/img/icon-google.svg", alt="google")
+                        | Iniciar Sesión con Google
+                    a(href="#").form__remember ¿Olvidaste tu contraseña?
+
+        .background
+
+prepend script-final

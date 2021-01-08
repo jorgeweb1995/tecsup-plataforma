@@ -1,0 +1,59 @@
+header
+    .header__contenedor.max-container
+        // Logo
+        h1.header__contenedor--logotipo
+            a(href="inicio.html") Tecsup
+        
+        // Icono Navegación
+        .header__contenedor--icono#icon
+            -for(let x = 0; x<=2; x++)
+                .icon-element
+        
+        // Navegación
+        nav#nav
+            ul.nav__lista.max-container
+                li.nav__lista--item.nav__lista--active: a(href="inicio.html" class="item__link")
+                    span.fas.fa-home
+                    | Inicio
+                li.nav__lista--item.nav__lista--active: a(href="cursos.html" class="item__link")
+                    span.fas.fa-book
+                    | Mis Cursos
+                li.nav__lista--item.nav__lista--active: a(href="tramites.html" class="item__link")
+                    span.fas.fa-sticky-note
+                    | Trámites
+                li.nav__lista--item.nav__lista--active: a(href="#" class="item__link")
+                    span.fas.fa-university
+                    | Institución
+                li.nav__lista--item.nav__lista--active: a(href="#" class="item__link")
+                    span.fas.fa-list
+                    | Rol de Exámenes
+                li.nav__lista--item.nav__lista--active: a(href="mensajes.html" class="item__link")
+                    span.fas.fa-envelope
+                    | Mensajes
+                li.nav__lista--item.nav__lista--active: a(href="#" class="item__link")
+                    span.fas.fa-calendar-alt
+                    | Calendario
+        
+        // Usuario
+        .header__usuario#usuario
+            img.usuario__img(src="public/img/usuario-plataforma.jpg", alt="Jorge Portilla")
+            .usuario__datos
+                span.dato__usuario Jorge Portilla
+                span.dato__codigo Código: 4520902
+            span.usuario__nav.fas.fa-ellipsis-v
+
+        // Navegación Usuario
+        .usuario#usuario--nav
+            ul.nav__lista.max-container
+                li.nav__lista--item: a(href="#" class="item__link")
+                    span.fas.fa-user
+                    | Perfil
+                li.nav__lista--item: a(href="#" class="item__link")
+                    span.fas.fa-tools
+                    | Configuración
+                li.nav__lista--item: a(href="#" class="item__link")
+                    span.fas.fa-th
+                    | Canvas
+                li.nav__lista--item: a(href="index.html" class="item__link")
+                    span.fas.fa-sign-out-alt.icono--salida
+                    | Cerrar Sesión

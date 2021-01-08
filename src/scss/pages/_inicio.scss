@@ -1,0 +1,161 @@
+.plataforma{
+    --columns: 4;
+    --gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-gap: var(--gap);
+    background-color: #F1F4FD;
+    @include from ($m3){
+        --columns: 12;
+        --gap: 24px;
+        padding-left: 200px;
+    }
+}
+//--------------
+//--------------
+.plataforma__main{
+    grid-column: 1 / 5;
+    padding-top: calc(1.5rem + 75px);
+    @include from ($m3){
+        grid-column: 1 / 9;
+        padding-top: 2.4rem;
+    }
+    .main__contenedor{
+        @include from ($m3){
+            max-width: 100%;
+            width: 100%;
+            padding-left: 1.5rem;
+        }
+        @include from ($m4){
+            padding-left: 2rem;
+        }
+    }
+}
+
+
+//--------------------------
+//--------------------------
+.titulo__bienvenida{
+    span{
+        font-weight: 900;
+        color: var(--first-color)
+    }
+}
+.contenedor-slider{
+    position: relative;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+}
+.slider {
+    display: flex;
+    width: 300%;
+}
+.slider__section{
+      width: 100%;
+      position: relative;
+ }
+.slider__contenido{
+    --medidas: 100%;
+    --position: 0;
+    position: absolute;
+    top: var(--position);
+    left: var(--position);
+    width: var(--medidas);
+    height: var(--medidas);
+    padding-left: 2.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: flex-end;
+    @include from ($m1){
+        padding-bottom: 4rem;
+        padding-left: 3.5rem;
+    }
+    @include from ($m2){
+        padding-bottom: 3rem;
+        padding-left: 4rem;
+    }
+    @include from ($m3){
+        padding-bottom: 2rem;
+    }
+    @include from ($m4){
+        padding-left: 5rem;
+        padding-bottom: 3rem;
+    }
+    .slider__informacion{
+        .slider__titulo{
+            a{
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--light-color);
+                display: inline-block;
+                width: 200px;
+                @include from ($m1){
+                    font-size: 1.4rem;
+                    width: 250px;
+                }
+                @include from ($m2){
+                    font-size: 1.7rem;
+                    width: 330px
+                }
+                @include from ($m3){
+                    font-size: 1.6rem;
+                    width: 280px;
+                }
+            }
+        }
+        .slider__boton{
+            display: none;
+            @include from ($m2){
+                display: inline-block;
+                margin-top: .8rem;
+            }
+        }
+    }
+}
+  
+.slider__img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    @include from ($m1){
+        height: 200px
+    }
+    @include from ($m2){
+        height: 250px
+    }
+    @include from ($m3){
+        //height: 220px
+        height: 233px
+    }
+    @include from ($m4){
+        height: 250px
+    }
+} 
+.btn-prev, .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--light-color)
+}
+.btn-prev {
+    left: 10px;
+    @include from ($m1){
+        left: 20px
+    }
+}
+.btn-next {
+    right: 10px;
+    @include from ($m1){
+        right: 20px
+    }
+}
+  
+//--------------------------
+//--------------------------
+.plataforma__cursos{
+    margin-top: 30px;
+}

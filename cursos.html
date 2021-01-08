@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title> Portal de Estudiantes | Cursos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robotos" content="index,follow">
+    <meta property="fb:app_id" content="">
+    <meta name="description" content="según el sitio">
+    <meta name="keywords" content=" palabras claves">
+    <link rel="icon" href="public/img/favicon.png" sizes="90x90">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/styles.css">
+  </head>
+  <body class="nav__2">
+    <header>
+      <div class="header__contenedor max-container">
+        <!-- Logo-->
+        <h1 class="header__contenedor--logotipo"><a href="inicio.html">Tecsup</a></h1>
+        <!-- Icono Navegación-->
+        <div class="header__contenedor--icono" id="icon">
+          <div class="icon-element"></div>
+          <div class="icon-element"></div>
+          <div class="icon-element"></div>
+        </div>
+        <!-- Navegación-->
+        <nav id="nav">
+          <ul class="nav__lista max-container">
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="inicio.html"><span class="fas fa-home"></span>Inicio</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="cursos.html"><span class="fas fa-book"></span>Mis Cursos</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="tramites.html"><span class="fas fa-sticky-note"></span>Trámites</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="#"><span class="fas fa-university"></span>Institución</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="#"><span class="fas fa-list"></span>Rol de Exámenes</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="mensajes.html"><span class="fas fa-envelope"></span>Mensajes</a></li>
+            <li class="nav__lista--item nav__lista--active"><a class="item__link" href="#"><span class="fas fa-calendar-alt"></span>Calendario</a></li>
+          </ul>
+        </nav>
+        <!-- Usuario-->
+        <div class="header__usuario" id="usuario"><img class="usuario__img" src="public/img/usuario-plataforma.jpg" alt="Jorge Portilla">
+          <div class="usuario__datos"><span class="dato__usuario">Jorge Portilla</span><span class="dato__codigo">Código: 4520902</span></div><span class="usuario__nav fas fa-ellipsis-v"></span>
+        </div>
+        <!-- Navegación Usuario-->
+        <div class="usuario" id="usuario--nav">
+          <ul class="nav__lista max-container">
+            <li class="nav__lista--item"><a class="item__link" href="#"><span class="fas fa-user"></span>Perfil</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#"><span class="fas fa-tools"></span>Configuración</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#"><span class="fas fa-th"></span>Canvas</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="index.html"><span class="fas fa-sign-out-alt icono--salida"></span>Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="plataforma">
+      <main class="plataforma__main">
+        <div class="main__contenedor max-container">
+        </div>
+      </main>
+      <aside class="plataforma__aside">
+        <div class="aside__contenedor max-container">
+          <div class="aside__calendario">
+            <h2 class="secondary-title">Calendario</h2>
+            <div class="calendario calendar"><div class="calendar__info">
+<div class="calendar__month" id="month"></div>
+<div class="calendar__year" id="year"></div>
+<div class="calendar__prev fas fa-chevron-left" id="prev-month"></div>
+<div class="calendar__next fas fa-chevron-right" id="next-month"></div>
+</div>
+<div class="calendar__week">
+<div class="calendar__day calendar__item">Lun.</div>
+<div class="calendar__day calendar__item">Mar.</div>
+<div class="calendar__day calendar__item">Mié.</div>
+<div class="calendar__day calendar__item">Jue.</div>
+<div class="calendar__day calendar__item">Vie.</div>
+<div class="calendar__day calendar__item">Sáb.</div>
+<div class="calendar__day calendar__item">Dom.</div>
+</div>
+<div class="calendar__dates" id="dates"></div>
+            </div>
+          </div>
+          <div class="aside__notificaciones">
+            <div class="notificaciones__header"> 
+              <h2 class="secondary-title">Notificaciones</h2><a href="#">Ver todo</a>
+            </div>
+            <div class="notificaciones__mensajes"><a class="notificaciones__item" href="mensaje-4.html">
+                <div class="notificaciones__mensaje"><span>Entrega de Certificado de Egresado</span><span>03 de Ene de 2021</span></div><span class="notificaciones__icono fas fa-chevron-right"></span></a><a class="notificaciones__item" href="mensaje-3.html">
+                <div class="notificaciones__mensaje"><span>Comprobante de pago de Certificado de Egresado</span><span>03 de Dic de 2020</span></div><span class="notificaciones__icono fas fa-chevron-right"></span></a><a class="notificaciones__item" href="mensaje-2.html">
+                <div class="notificaciones__mensaje"><span>Inicio de temporada: Ruta laboral 2021</span><span>20 de Dic de 2020</span></div><span class="notificaciones__icono fas fa-chevron-right"></span></a><a class="notificaciones__item" href="mensaje-1.html">
+                <div class="notificaciones__mensaje"><span>Información sobre convenios institucionales</span><span>08 de Dic de 2020</span></div><span class="notificaciones__icono fas fa-chevron-right"></span>
+                <!-- https://desarrolloweb.com/articulos/recortar-texto-css-ellipsis.html--></a></div>
+          </div>
+        </div>
+      </aside>
+      <footer class="plataforma__footer">
+        <div class="footer__contenedor max-container"><a class="footer__logo" href="#"><img src="public/img/logo-positivo.svg" alt="Tecsup"></a>
+          <ul class="footer__lista">
+            <li><a href="#"><span class="fas fa-envelope"></span>info@tecsup.com</a></li>
+            <li><a href="#"><span class="fas fa-phone-alt"></span>Lima (01) 310 9510</a></li>
+            <li><a href="#"><span class="fas fa-phone-alt"></span>Provincia (01) 462 9308</a></li>
+            <li><a href="#"><span class="fas fa-clock"></span>Atención L-V: 08.00 - 20:00</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="public/js/main-min.js"></script>
+  </body>
+</html>

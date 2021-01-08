@@ -1,0 +1,71 @@
+extends ../config/template
+append config
+    - NombPagina = "Inicio"
+    - classActive = "nav__1"
+prepend styles
+block contenido
+
+    h2.titulo__bienvenida.secondary-title Hola #[span Jorge], bienvenido
+    .contenedor-slider#contenedor-slider
+        .slider#slider
+            .slider__section
+                .slider__contenido
+                    .slider__informacion
+                        h3.slider__titulo
+                            a(href="#") Accede a nuestra ruta laboral 2021
+                        a(href="#").slider__boton.button__standart.first-color Más información
+                img.slider__img(src="public/img/inicio/slider-1.jpg" alt="slider-1")
+            .slider__section
+                .slider__contenido
+                    .slider__informacion
+                        h3.slider__titulo
+                            a(href="#") Programa de alta especialización
+                        a(href="#").slider__boton.button__standart.first-color Más información
+                img.slider__img(src="public/img/inicio/slider-2.jpg" alt="slider-2")
+            .slider__section
+                .slider__contenido
+                    .slider__informacion
+                        h3.slider__titulo
+                            a(href="#") Nueva carrera Aviónica y Mecánica Aeronaútica
+                        a(href="#").slider__boton.button__standart.first-color Más información
+                img.slider__img(src="public/img/inicio/slider-3.jpg" alt="slider-3")
+        .btn-prev#btn-prev.fas.fa-chevron-left
+        .btn-next#btn-next.fas.fa-chevron-right
+
+    //---------------
+    .plataforma__cursos
+        h2.secondary-title Cursos matriculados 2020 - II
+        .plataforma__tabla
+            .plataforma__contenedor
+                .tabla__header
+                    .tabla__header--column: span Curso
+                    .tabla__header--column: span Docente 
+                    .tabla__header--column: span Créditos
+                    .tabla__header--column: span Inasistencia
+                .tabla__row
+                    .tabla__row--cell: span Analítica para la solución de problemas
+                    .tabla__row--cell: span Aponte Valenzuela, José Ricardo
+                    .tabla__row--cell: span 4
+                    .tabla__row--cell: span 3%
+                .tabla__row
+                    .tabla__row--cell: span Estadística aplicada
+                    .tabla__row--cell: span Ortega Suarez, Yaneth Pilar
+                    .tabla__row--cell: span 4
+                    .tabla__row--cell: span 10%
+                .tabla__row
+                    .tabla__row--cell: span Gestión de análisis de datos
+                    .tabla__row--cell: span Terkes Cruz, Rodrigo Alberto
+                    .tabla__row--cell: span 4
+                    .tabla__row--cell: span 10%
+                .tabla__row
+                    .tabla__row--cell: span Modelamiento de negocios
+                    .tabla__row--cell: span Flores Sanchez, Joan Camilo
+                    .tabla__row--cell: span 3
+                    .tabla__row--cell: span 20%
+                .tabla__row
+                    .tabla__row--cell: span Tecnologías emergentes
+                    .tabla__row--cell: span Fischman Bareto,  Luis Manuel
+                    .tabla__row--cell: span 4
+                    .tabla__row--cell: span 0%
+
+prepend script-final
